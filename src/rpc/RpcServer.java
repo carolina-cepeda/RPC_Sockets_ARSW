@@ -73,8 +73,7 @@ public class RpcServer {
 private int[] parseInts(String csv, int expected) {
 
  String[] parts = csv.split(",");
-    if (parts.length != expected) throw new IllegalArgumentException("Expected " + expected + " 
-    params");
+    if (parts.length != expected) throw new IllegalArgumentException("Expected " + expected + " params");
 
     int[] out = new int[expected];
     for (int i = 0; i < expected; i++) out[i] = Integer.parseInt(parts[i].trim());
