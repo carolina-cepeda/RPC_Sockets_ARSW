@@ -61,7 +61,7 @@ public class CalculatorClientStub implements CalculatorService {
    }
 
    private int parseResultOrThrow(String id, String responseLine) {
-
+      System.out.println("Received response: " + responseLine);
       if (responseLine == null) throw new RuntimeException("Empty response");
       var resp = RpcProtocol.parseLine(responseLine);
       if (!id.equals(resp.get("id"))) throw new RuntimeException("Mismatched response id");
